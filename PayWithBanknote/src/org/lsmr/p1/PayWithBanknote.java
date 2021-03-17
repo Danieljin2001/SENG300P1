@@ -12,7 +12,6 @@ import org.lsmr.selfcheckout.devices.listeners.BanknoteValidatorListener;
 
 //accepts one bank note at a time after validating it
 public class PayWithBanknote {
-	private int amountPaid = 0;
 	private SelfCheckoutStation selfCheckoutStation;
 	private boolean banknoteIsValid = false;
 
@@ -56,23 +55,24 @@ public class PayWithBanknote {
 	
 	//if the bank note is accepted, it is delivered into the Unidirectional sink and amount paid is registered
 	//if the bank note is not accepted, it is ejected out of the same place the bank note was initially inserted into and amount paid is $0
-	public void acceptBanknote(Banknote aBanknote) {
+	public int acceptBanknote(Banknote aBanknote) {
+		int amountPaid = 0;
 		try {
 			selfCheckoutStation.banknoteValidator.accept(aBanknote);
 			if (selfCheckoutStation.banknoteStorage.hasSpace() && banknoteIsValid) { //checks if the sink has space and bank note is valid
 				amountPaid = aBanknote.getValue();
+				return amountPaid;
 			}
 			else {
 				amountPaid = 0;
+				return amountPaid;
 			}
 		}
 		catch (DisabledException e) {
 			amountPaid = 0;
+			return amountPaid;
 		}
 	}
 	
-	public int getAmountPaid() {
-		return amountPaid;
-	}
 }
 
