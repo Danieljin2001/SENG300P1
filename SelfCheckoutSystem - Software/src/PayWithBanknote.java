@@ -1,5 +1,3 @@
-package org.lsmr.p1;
-
 import java.util.Currency;
 
 import org.lsmr.selfcheckout.Banknote;
@@ -27,7 +25,6 @@ public class PayWithBanknote {
 		@Override
 		public void enabled(AbstractDevice<? extends AbstractDeviceListener> device) {
 			// TODO Auto-generated method stub
-			
 		}
 
 		@Override
@@ -75,4 +72,3 @@ public class PayWithBanknote {
 	}
 	
 }
-
