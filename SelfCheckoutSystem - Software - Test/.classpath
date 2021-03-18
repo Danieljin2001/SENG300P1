@@ -8,6 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="/SelfCheckoutSystem - Hardware - v1.0"/>
-	<classpathentry kind="src" path="/PayWithBanknote"/>
+	<classpathentry kind="src" path="/SelfCheckoutSystem - Software"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
