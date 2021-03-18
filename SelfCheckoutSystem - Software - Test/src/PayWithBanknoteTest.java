@@ -3,7 +3,6 @@ import static org.junit.Assert.assertEquals;
 import java.math.BigDecimal;
 import java.util.Currency;
 import org.junit.Test;
-import org.lsmr.p1.PayWithBanknote;
 import org.lsmr.selfcheckout.Banknote;
 import org.lsmr.selfcheckout.devices.SelfCheckoutStation;
 
